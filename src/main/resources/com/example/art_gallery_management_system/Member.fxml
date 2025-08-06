@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="561.0" prefWidth="781.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.MemberController">
+    <children>
+        <TabPane layoutX="10.0" layoutY="61.0" prefHeight="494.0" prefWidth="758.0">
+            <tabs>
+                <!-- Tab for Register Form -->
+                <Tab text="Register Member">
+                    <content>
+                        <AnchorPane prefHeight="370.0" prefWidth="664.0">
+                            <children>
+                                <Label layoutX="57.0" layoutY="50.0" text="NIC:" />
+                                <ComboBox fx:id="nicComboBox" layoutX="209.0" layoutY="50.0" prefHeight="34.0" prefWidth="200" />
+
+                                <Label layoutX="50.0" layoutY="149.0" text="Valid Date:" />
+                                <TextField fx:id="validDateField" editable="false" layoutX="209.0" layoutY="149.0" prefWidth="200" />
+
+                                <Label layoutX="48.0" layoutY="231.0" text="Payment:" />
+                                <TextField fx:id="paymentField" layoutX="209.0" layoutY="231.0" prefWidth="200" text="10000.00" />
+
+                                <Button layoutX="231.0" layoutY="359.0" onAction="#registerMember" prefHeight="36.0" prefWidth="156.0" text="Register" />
+                        <ImageView fitHeight="271.0" fitWidth="304.0" layoutX="421.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../The%20Lyft%20Direct%20debit%20card%20for%20drivers.gif" />
+                           </image>
+                        </ImageView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+                <!-- Tab for Member List -->
+                <Tab text="Member List">
+                    <content>
+                        <VBox alignment="CENTER" prefHeight="430.0" prefWidth="758.0" spacing="10.0">
+                            <children>
+                                <TableView fx:id="memberTableView" prefHeight="484.0" prefWidth="758.0">
+                                    <columns>
+                                        <TableColumn fx:id="midColumn" text="MID" />
+                                        <TableColumn fx:id="nicColumn" prefWidth="240.00000762939453" text="NIC" />
+                                        <TableColumn fx:id="dateColumn" prefWidth="152.0" text="Date" />
+
+                                        <TableColumn fx:id="validDateColumn" prefWidth="153.59994506835938" text="Valid Date" />
+                                        <TableColumn fx:id="paymentColumn" prefWidth="132.800048828125" text="Payment" />
+                                    </columns>
+                                </TableView>
+                        <AnchorPane prefHeight="139.0" prefWidth="758.0">
+                           <children>
+                              <Button layoutX="586.0" layoutY="1.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="157.0" text="Delete" />
+                           </children>
+                        </AnchorPane>
+
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+
+            </tabs>
+        </TabPane>
+      <AnchorPane layoutX="10.0" layoutY="9.0" prefHeight="42.0" prefWidth="758.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="14.0" layoutY="7.0" styleClass="label1" stylesheets="@style.css" text="MANAGE MEMBER" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

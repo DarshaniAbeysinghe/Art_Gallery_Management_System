@@ -1,0 +1,9 @@
+/* styles.css */
+.image-view {
+    -fx-border-color: black; /* Border color */
+    -fx-border-width: 2; /* Border width */
+    -fx-padding: 10; /* Padding inside the ImageView */
+    -fx-background-color: lightgray; /* Background color */
+    -fx-opacity: 0.9; /* Opacity of the image */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0); /* Drop shadow effect */
+}

@@ -1,0 +1,58 @@
+/* Main AnchorPane background */
+.anchor-pane {
+    -fx-background-color: #489fb5; /* Light gray-blue background */
+}
+
+/* Rounded inner AnchorPane */
+.inner-pane {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20; /* Rounded corners */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 5);
+    -fx-padding: 20;
+}
+
+/* Circular ImageView */
+.circular-image {
+
+}
+
+/* TextField styling */
+.text-field {
+    -fx-background-color: #eef2f7;
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #7a7a7a;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #034078; /* Primary button color */
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: #357ab7;
+}
+
+/* Label styling */
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+}
+
+/* Price Label styling */
+.price-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #034078;
+}
+

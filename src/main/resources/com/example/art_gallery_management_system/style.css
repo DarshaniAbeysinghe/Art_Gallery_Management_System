@@ -1,0 +1,251 @@
+/* Main anchor pane background */
+.my-anchor-pane {
+    -fx-background-color: #489fb5; /* Light gray-blue background */
+}
+
+/* SplitPane Styling */
+.split-pane-style {
+    -fx-background-color: #f0f8ff; /* AliceBlue background */
+}
+
+/* Left AnchorPane Styling */
+.left-pane {
+    -fx-background-color: #489fb5; /* Light gray-blue background */
+}
+
+/* Right AnchorPane Styling */
+.right-pane {
+    -fx-background-color: #d3d3d3; /* Light gray background */
+}
+
+
+/* Container with shadow effect */
+.vbox-pane {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 5);
+    -fx-padding: 20;
+}
+
+/* BorderPane Styling */
+.border-pane {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-background-radius: 10; /* Optional rounded corners */
+    -fx-padding: 10; /* Optional padding */
+}
+
+.center-pane {
+    -fx-background-color: #489fb5; /* Light blue color */
+}
+/* TabPane Styling */
+.tab-pane {
+    -fx-background-color: #ffffff; /* White background for TabPane */
+}
+
+/* Text area (addressField) styling to match other TextFields */
+.text-area {
+    -fx-background-color: #eef2f7; /* Same as TextField background */
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #7a7a7a;
+}
+
+/* RadioButton Styling */
+.radio-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #034078; /* Text color to match buttons */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5 10;
+    -fx-cursor: hand;
+}
+
+.radio-button:selected {
+    -fx-text-fill: #357ab7; /* Color when selected */
+}
+
+.radio-button .radio {
+    -fx-background-color: #eef2f7; /* Background color when not selected */
+    -fx-background-radius: 50%;
+    -fx-border-color: transparent;
+    -fx-border-width: 2;
+}
+
+.radio-button .radio:hover {
+    -fx-border-color: #357ab7;
+}
+
+/* Label Styling to match Button Text */
+.label {
+    -fx-font-size: 16px; /* Consistent font size */
+    -fx-text-fill: #000000; /* Text color */
+    -fx-font-weight: bold;
+    -fx-font-family: Georgia, serif; /* Same font family as buttons */
+}
+
+
+
+/* Apply styles to the radio buttons in the form */
+.male-radio-button, .female-radio-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #034078;
+}
+
+/* TabPane Styling */
+.tab-pane {
+    -fx-background-color: #ffffff; /* White background for TabPane */
+
+}
+
+/* Tab Styling */
+.tab {
+    -fx-background-color: #e0e0e0; /* Light gray background for inactive tabs */
+    -fx-text-fill: #555555; /* Dark text color for inactive tabs */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+    -fx-transition: background-color 0.3s ease;
+    -fx-background-radius: 5; /* Rounded corners for tabs */
+}
+
+/* Hover effect for Tab */
+.tab:hover {
+    -fx-background-color: #489fb5; /* Light blue background for hover effect */
+}
+
+/* Active Tab Styling */
+.tab:selected {
+    -fx-background-color: #489fb5; /* Blue color for the selected tab */
+    -fx-text-fill: white; /* White text when the tab is selected */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-border-width: 0;
+    -fx-background-radius: 5; /* Rounded corners for the selected tab */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.2, 0, 3); /* Shadow effect */
+}
+
+/* Tab Label Styling */
+.tab .tab-label {
+    -fx-text-fill: #555555; /* Text color for inactive tab labels */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* Active Tab Label Styling */
+.tab:selected .tab-label {
+    -fx-text-fill: white; /* White text for the active tab label */
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Optional shadow effect for selected tab */
+.tab:selected {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.2, 0, 3); /* Subtle shadow on active tab */
+}
+
+
+
+/* Text field styling */
+.text-field {
+    -fx-background-color: #eef2f7;
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #7a7a7a;
+}
+
+/* Buttons styling */
+.button {
+    -fx-background-color: #034078; /* Primary button color */
+    -fx-background-radius: 10;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: #357ab7;
+}
+
+/* Label styling */
+.label1 {
+    -fx-font-size: 24px;
+    -fx-text-fill: #C40C0C;
+    -fx-font-weight: bold;
+    -fx-font-family : Georgia, serif;
+}
+
+.label2 {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-font-family : Georgia, serif;
+}
+
+.label3 {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+}
+
+/* ImageView styling */
+.image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.2, 0, 3);
+}
+
+/* ComboBox Styling */
+.combo-box {
+    -fx-background-color: #eef2f7; /* Same background as TextFields */
+    -fx-background-radius: 15; /* Rounded corners */
+    -fx-padding: 10; /* Padding for a clean look */
+    -fx-font-size: 14px; /* Font size to match text fields */
+    -fx-prompt-text-fill: #7a7a7a; /* Prompt text color */
+    -fx-border-color: transparent; /* No border by default */
+    -fx-border-width: 2px; /* Consistent border width */
+}
+
+/* ComboBox Hover Effect */
+.combo-box:hover {
+    -fx-background-color: #dfe6ed; /* Slightly lighter background on hover */
+    -fx-border-color: #357ab7; /* Light blue border on hover */
+}
+
+/* ComboBox Focused State */
+.combo-box:focused {
+    -fx-background-color: #ffffff; /* White background when focused */
+    -fx-border-color: #034078; /* Primary blue border when focused */
+    -fx-border-width: 2px;
+}
+
+/* ComboBox Popup Styling */
+.combo-box .list-view {
+    -fx-background-color: #ffffff; /* White background for dropdown */
+    -fx-border-color: #eef2f7; /* Soft border for dropdown */
+    -fx-background-radius: 5; /* Rounded corners for dropdown */
+}
+
+/* ComboBox Text Styling */
+.combo-box .text {
+    -fx-fill: #555555; /* Text color */
+}
+
+
+
+.combo-box .arrow-button:hover {
+    -fx-background-color: #357ab7; /* Lighter blue for hover */
+}
+
+.combo-box .arrow {
+    -fx-background-color: white; /* White arrow */
+}
+

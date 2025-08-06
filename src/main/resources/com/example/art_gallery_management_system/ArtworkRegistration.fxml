@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="674.0" prefWidth="875.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.ArtworkRegistrationController">
+   <TabPane fx:id="tabPane" layoutX="10.0" layoutY="64.0" prefHeight="593.0" prefWidth="854.0" stylesheets="@style.css">
+      <tabs>
+         <!-- First Tab: Artwork Registration -->
+         <Tab text="Artwork Registration">
+            <AnchorPane prefHeight="563.0" prefWidth="827.0">
+               <children>
+                  <TextField fx:id="nametxt" layoutX="216.0" layoutY="41.0" prefHeight="42.0" prefWidth="198.0" promptText="Name" />
+                  <TextField fx:id="sizetxt" layoutX="213.0" layoutY="103.0" prefHeight="42.0" prefWidth="198.0" promptText="Size" />
+                  <TextField fx:id="pricetxt" layoutX="216.0" layoutY="399.0" prefHeight="42.0" prefWidth="198.0" promptText="Price" />
+                  <TextArea fx:id="desarea" layoutX="214.0" layoutY="318.0" prefHeight="42.0" prefWidth="198.0" promptText="Description" />
+                  <ComboBox fx:id="artistcmb" layoutX="617.0" layoutY="49.0" prefHeight="42.0" prefWidth="198.0" promptText="Artist" />
+                  <ComboBox fx:id="mediumcmb" layoutX="213.0" layoutY="173.0" prefHeight="42.0" prefWidth="198.0" promptText="Medium" />
+                  <ComboBox fx:id="subjectcmb" layoutX="212.0" layoutY="246.0" prefHeight="42.0" prefWidth="198.0" promptText="Subject" />
+                  <ImageView fx:id="artimg" fitHeight="150.0" fitWidth="200.0" layoutX="624.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imm.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="addbtn" layoutX="171.0" layoutY="477.0" mnemonicParsing="false" onAction="#registerArtwork" prefHeight="38.0" prefWidth="150.0" text="Add" />
+                  <Button fx:id="updatebtn" layoutX="364.0" layoutY="477.0" mnemonicParsing="false" onAction="#updateArtwork" prefHeight="38.0" prefWidth="150.0" text="Update" />
+
+                  <Button fx:id="clearbtn" layoutX="556.0" layoutY="477.0" mnemonicParsing="false" onAction="#clearbtnAction" prefHeight="38.0" prefWidth="150.0" text="Clear" />
+                  <Button fx:id="addartbtn" layoutX="603.0" layoutY="308.0" mnemonicParsing="false" onAction="#addArtworkImage" text="Browse Artwork Image" />
+                  <Label layoutX="82.0" layoutY="44.0" text="Name :" />
+                  <Label layoutX="80.0" layoutY="103.0" text="Size :" />
+                  <Label layoutX="79.0" layoutY="325.0" text="Description :" />
+                  <Label layoutX="81.0" layoutY="175.0" text="Medium :" />
+                  <Label layoutX="81.0" layoutY="246.0" text="Subject :" />
+                  <Label layoutX="516.0" layoutY="53.0" text="Artist :" />
+                  <Label layoutX="82.0" layoutY="399.0" text="Price :" />
+                  <Label layoutX="514.0" layoutY="144.0" text="Image :" />
+               </children>
+            </AnchorPane>
+         </Tab>
+
+         <!-- Second Tab: Artwork Details -->
+         <Tab text="Artwork Details">
+            <AnchorPane>
+               <children>
+                  <TableView fx:id="artworkTable" layoutX="11.0" layoutY="67.0" prefHeight="404.0" prefWidth="830.0">
+                     <columns>
+                        <TableColumn fx:id="columnArtworkID" prefWidth="69.60000801086426" text="ID" />
+                        <TableColumn fx:id="columnArtistID" prefWidth="128.79998016357422" text="Artist ID" />
+                        <TableColumn fx:id="columnName" prefWidth="128.79998016357422" text="Name" />
+                        <TableColumn fx:id="columnSize" prefWidth="128.79998016357422" text="Size" />
+                        <TableColumn fx:id="columnPrice" prefWidth="128.79998016357422" text="Price" />
+                        <TableColumn fx:id="descriptionColumn" prefWidth="128.79998016357422" text="Description" />
+                        <TableColumn fx:id="artistColumn" prefWidth="128.79998016357422" text="Artist" />
+                        <TableColumn fx:id="columnMedium" prefWidth="128.79998016357422" text="Medium" />
+                        <TableColumn fx:id="columnSubject" prefWidth="128.79998016357422" text="Subject" />
+                        <TableColumn fx:id="imageColumn" prefWidth="100.0" text="Image" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="deleteArtworkBtn" layoutX="690.0" layoutY="493.0" mnemonicParsing="false" onAction="#deleteSelectedArtwork" prefHeight="38.0" prefWidth="150.0" text="Delete Artwork" />
+
+                  <TextField fx:id="searchtxt" layoutX="661.0" layoutY="14.0" promptText="Enter ID to search" />
+                  <Button fx:id="btnsearch" layoutX="558.0" layoutY="16.0" onAction="#searchArtworkAction" text="Search" />
+               </children>
+            </AnchorPane>
+         </Tab>
+      </tabs>
+   </TabPane>
+   <AnchorPane layoutX="10.0" layoutY="7.0" prefHeight="44.0" prefWidth="854.0" style="-fx-background-color: white;">
+      <children>
+         <Label layoutX="13.0" layoutY="9.0" styleClass="label1" stylesheets="@style.css" text="MANAGE ARTWORK" />
+      </children>
+   </AnchorPane>
+</AnchorPane>

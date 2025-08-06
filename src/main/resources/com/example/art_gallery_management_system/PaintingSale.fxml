@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="525.0" prefWidth="710.0" styleClass="chart-plot-background" stylesheets="@chart.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.PaintingSaleController">
+    <ComboBox fx:id="weekComboBox" layoutX="102.0" layoutY="56.0" onAction="#onWeekSelectionChanged" styleClass="combo-box-popup" stylesheets="@chart.css" />
+    <ComboBox fx:id="monthComboBox" layoutX="252.0" layoutY="56.0" onAction="#onMonthSelectionChanged" styleClass="combo-box-popup" stylesheets="@chart.css" />
+    <LineChart fx:id="salesLineChart" layoutX="24.0" layoutY="86.0" prefHeight="410.0" prefWidth="661.0" styleClass="chart-bar" stylesheets="@chart.css">
+        <xAxis>
+            <CategoryAxis fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="yAxis" stylesheets="@chart.css" />
+        </yAxis>
+    </LineChart>
+   <Label layoutX="19.0" layoutY="7.0" styleClass="label1" stylesheets="@style.css" text="Painting Sales" />
+</AnchorPane>

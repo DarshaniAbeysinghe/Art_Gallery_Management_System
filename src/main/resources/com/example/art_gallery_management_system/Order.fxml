@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="mainPane" prefHeight="654.0" prefWidth="826.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.OrderController">
+   <children>
+      <!-- New AnchorPane above the parent AnchorPane -->
+      <AnchorPane layoutX="12.0" layoutY="11.0" prefHeight="634.0" prefWidth="805.0" style="-fx-background-color: white;">
+         <children>
+      
+            <!-- Order ID TextField -->
+            <TextField fx:id="orderIdField" editable="false" layoutX="578.0" layoutY="41.0" promptText="Order ID" />
+      
+            <!-- NIC TextField -->
+            <TextField fx:id="nicField" editable="false" layoutX="122.0" layoutY="41.0" promptText="NIC" />
+      
+            <!-- Amount TextField -->
+            <TextField fx:id="amounttxt" editable="false" layoutX="586.0" layoutY="505.0" promptText="Amount" />
+      
+            <!-- Discount TextField -->
+            <TextField fx:id="discounttxt" editable="false" layoutX="586.0" layoutY="445.0" promptText="Discount" />
+      
+            <!-- Total Price Field -->
+            <TextField fx:id="totalPriceField" editable="false" layoutX="586.0" layoutY="383.0" promptText="Sub Total" />
+      
+            <!-- Membership ID TextField -->
+            <TextField fx:id="midtxt" layoutX="215.0" layoutY="445.0" promptText="Membership ID" />
+            <Label layoutX="62.0" layoutY="53.0" text="NIC :" />
+            <Label layoutX="517.0" layoutY="52.0" text="OID :" />
+            <Label layoutX="449.0" layoutY="395.0" text="Sub Total :" />
+            <Label layoutX="52.0" layoutY="394.0" text="Delivery Location :" />
+      
+            <!-- Delivery Location TextField -->
+            <TextField fx:id="deliveryAddressField" layoutX="215.0" layoutY="383.0" promptText="Delivery Location" />
+            <Label layoutX="52.0" layoutY="456.0" text="Member ID :" />
+            <Label layoutX="449.0" layoutY="457.0" text="Discount :" />
+            <Label layoutX="449.0" layoutY="516.0" text="Total Amount :" />
+      
+            <!-- Place Order Button -->
+            <Button fx:id="porderbtn" layoutX="320.0" layoutY="573.0" mnemonicParsing="false" onAction="#handlePlaceOrder" prefHeight="36.0" prefWidth="150.0" text="Place Order" />
+         </children>
+      </AnchorPane>
+
+                  <!-- TableView for Order Items -->
+      <TableView fx:id="orderTable" layoutX="65.0" layoutY="137.0" prefHeight="243.0" prefWidth="708.0">
+         <columns>
+            <TableColumn fx:id="colArtworkId" prefWidth="126.39996337890625" text="Artwork ID" />
+            <TableColumn fx:id="colArtworkName" prefWidth="201.6000213623047" text="Artwork Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="194.4000244140625" text="Quantity" />
+            <TableColumn fx:id="colPrice" prefWidth="186.39996337890625" text="Price" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

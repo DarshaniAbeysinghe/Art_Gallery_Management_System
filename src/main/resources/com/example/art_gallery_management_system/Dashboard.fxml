@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="815.0" prefWidth="1536.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.DashboardController">
+   <children>
+      <BorderPane layoutX="8.0" layoutY="8.0" prefHeight="754.0" prefWidth="1521.0" styleClass="border-pane" stylesheets="@style.css">
+         <top>
+            <AnchorPane prefHeight="101.0" prefWidth="1501.0" style="-fx-background-color: B1F0F7;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="1149.4000244140625" layoutX="349.0" layoutY="100.0" startX="-100.0" stroke="#489fb5" strokeWidth="3.0" />
+                  <Button fx:id="managecustomerbtn" layoutX="278.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleCustomerManageBtnAction" prefHeight="36.0" prefWidth="170.0" text="Manage Customers" />
+                  <Button fx:id="artworkRegistration" layoutX="757.0" layoutY="33.0" mnemonicParsing="false" onAction="#artworkRegistrationAction" prefHeight="36.0" prefWidth="167.0" text="Manage Artworks" />
+                  <Button fx:id="manageartistbtn" layoutX="1008.0" layoutY="33.0" mnemonicParsing="false" onAction="#manageartistbtnAction" prefHeight="36.0" prefWidth="166.0" text="Manage Artist" />
+                  <Button fx:id="manageOrdersButton" layoutX="1242.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleorderAction" prefHeight="36.0" prefWidth="167.0" text="Manage Orders" />
+                  <ImageView fx:id="yourImageView" fitHeight="29.0" fitWidth="31.0" layoutX="1461.0" layoutY="7.0" onMouseClicked="#openViewsForm" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../cross_14875490.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Button fx:id="memberbtn" layoutX="522.0" layoutY="33.0" mnemonicParsing="false" onAction="#handlememberAction" prefHeight="36.0" prefWidth="170.0" text="Manage Members" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="680.0" prefWidth="244.0" style="-fx-background-color: B1F0F7;" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="-101.49996948242188" endY="667.6000366210938" layoutX="349.0" layoutY="2.0" startX="-101.5" startY="-2.899998426437378" stroke="#489fb5" strokeWidth="3.0" />
+                  <Label layoutX="64.0" layoutY="54.0" prefHeight="34.0" prefWidth="118.0" style="-fx-alignment: center;" styleClass="label2" stylesheets="@style.css" text="Reports" />
+                  <Button fx:id="psbtn" layoutX="39.0" layoutY="115.0" mnemonicParsing="false" onAction="#handlePsbtnAction" prefHeight="36.0" prefWidth="173.0" text="Painting Sales" />
+                  <Button fx:id="tsbtn" layoutX="39.0" layoutY="195.0" mnemonicParsing="false" onAction="#handleTsbtnAction" prefHeight="36.0" prefWidth="174.0" text="Ticket Sales" />
+                  <Button fx:id="sdbtn" layoutX="39.0" layoutY="277.0" mnemonicParsing="false" onAction="#handleSdbtnAction" prefHeight="36.0" prefWidth="174.0" text="Shares' Distribution" />
+                  <ImageView fitHeight="34.0" fitWidth="42.0" layoutX="21.0" layoutY="575.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btnhome" layoutX="39.0" layoutY="557.0" mnemonicParsing="false" onAction="#btnhomeAction" prefHeight="36.0" prefWidth="174.0" style="-fx-background-color: #4CAF50;" text="Home" />
+                  <Button fx:id="ticketIssueButton" layoutX="38.0" layoutY="486.0" mnemonicParsing="false" onAction="#ticketIssueAction" prefHeight="36.0" prefWidth="175.0" text="Ticket Issue" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="centerPane" prefHeight="666.0" prefWidth="1253.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="homeanchor" layoutX="366.0" layoutY="117.0" prefHeight="339.0" prefWidth="579.0">
+                     <children>
+                        <Label layoutX="64.0" layoutY="95.0" styleClass="label1" stylesheets="@style.css" text="WELCOME TO ART HAVEN STUDIO" />
+                        <TextField fx:id="txtOrderId" layoutX="134.0" layoutY="170.0" prefHeight="54.0" prefWidth="234.0" promptText="Enter the OrderID" />
+                        <ImageView fx:id="searchimg" fitHeight="52.0" fitWidth="49.0" layoutX="409.0" layoutY="173.0" onMouseClicked="#handleSearchAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../hiring.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

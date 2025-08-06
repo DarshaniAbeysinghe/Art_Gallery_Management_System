@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="569.0" prefWidth="786.0" styleClass="anchor-pane" stylesheets="@regiadmin.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.Regi_AdminController">
+   <children>
+      <TextField fx:id="fnametxt" layoutX="186.0" layoutY="23.0" promptText="Enter Your First Name" />
+      <TextField fx:id="lnametxt" layoutX="186.0" layoutY="79.0" promptText="Enter Your Last Name" />
+      <TextField fx:id="tptxt" layoutX="186.0" layoutY="135.0" promptText="Enter Your Tp. Number" />
+      <TextField fx:id="leveltxt" layoutX="187.0" layoutY="194.0" promptText="Enter Your Level" />
+      <TextField fx:id="unametxt" layoutX="187.0" layoutY="255.0" promptText="Enter Your User Name" />
+      <TextField fx:id="qrtxt" layoutX="187.0" layoutY="316.0" promptText="Create A Password" />
+      <ImageView fx:id="qrImageView" fitHeight="55.0" fitWidth="72.0" layoutX="277.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="qrbtn" layoutX="247.0" layoutY="508.0" mnemonicParsing="false" onAction="#qrbtnAction" prefHeight="36.0" prefWidth="114.0" text="Register" />
+      <Label layoutX="75.0" layoutY="32.0" styleClass="label3" stylesheets="@regiadmin.css" text="First Name" />
+      <Label layoutX="75.0" layoutY="87.0" styleClass="label3" stylesheets="@regiadmin.css" text="Last Name" />
+      <Label layoutX="76.0" layoutY="144.0" styleClass="label3" stylesheets="@regiadmin.css" text="Tp No" />
+      <Label layoutX="78.0" layoutY="205.0" styleClass="label3" stylesheets="@regiadmin.css" text="Level" />
+      <Label layoutX="78.0" layoutY="261.0" styleClass="label3" stylesheets="@regiadmin.css" text="User Name" />
+      <Label layoutX="79.0" layoutY="326.0" styleClass="label3" stylesheets="@regiadmin.css" text="Password" />
+      <Button fx:id="qrbtn1" layoutX="61.0" layoutY="508.0" mnemonicParsing="false" onAction="#qrbtnAction" prefHeight="36.0" prefWidth="114.0" text="Cancel" />
+      <VBox layoutX="400.0" layoutY="9.0" prefHeight="562.0" prefWidth="386.0">
+         <children>
+            <AnchorPane prefHeight="500.0" prefWidth="318.0">
+               <children>
+                  <ImageView fitHeight="576.0" fitWidth="384.0" layoutX="2.0" layoutY="-10.0">
+                     <image>
+                        <Image url="@../../../4bad729e-aa0b-410a-9908-4c9b5db8454e.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

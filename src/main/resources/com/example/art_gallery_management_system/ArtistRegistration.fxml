@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="674.0" prefWidth="875.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.ArtistRegistrationController">
+   <TabPane layoutX="9.0" layoutY="66.0" prefHeight="593.0" prefWidth="854.0" stylesheets="@style.css">
+      <tabs>
+         <!-- First Tab: Artist Registration -->
+         <Tab text="Artist Registration">
+            <AnchorPane prefHeight="524.0" prefWidth="855.0">
+               <children>
+                  <TextField fx:id="nicField" layoutX="213.0" layoutY="42.0" prefHeight="42.0" prefWidth="196.0" promptText="NIC" />
+                  <TextField fx:id="firstNameField" layoutX="212.0" layoutY="118.0" prefHeight="42.0" prefWidth="198.0" promptText="First Name" />
+                  <TextField fx:id="lastNameField" layoutX="210.0" layoutY="188.0" prefHeight="42.0" prefWidth="198.0" promptText="Last Name" />
+                  <TextField fx:id="emailField" layoutX="213.0" layoutY="312.0" prefHeight="42.0" prefWidth="199.0" promptText="Email" />
+                  <TextField fx:id="tpNoField" layoutX="602.0" layoutY="45.0" prefHeight="42.0" prefWidth="198.0" promptText="Tp" />
+                  <RadioButton fx:id="maleRadioButton" layoutX="207.0" layoutY="250.0" mnemonicParsing="false" text="Male" />
+                  <RadioButton fx:id="femaleRadioButton" layoutX="320.0" layoutY="250.0" mnemonicParsing="false" text="Female" />
+                  <TextArea fx:id="addressField" layoutX="212.0" layoutY="376.0" prefHeight="50.0" prefWidth="200.0" promptText="Address" />
+                  <Button fx:id="registerbtn" layoutX="186.0" layoutY="470.0" mnemonicParsing="false" onAction="#registerbtnAction" prefHeight="38.0" prefWidth="150.0" text="Register" />
+                  <Label layoutX="69.0" layoutY="47.0" prefHeight="18.0" prefWidth="78.0" text="NIC :">
+                     <font>
+                        <Font size="10.0" />
+                     </font></Label>
+                  <Label layoutX="69.0" layoutY="125.0" prefHeight="19.0" prefWidth="124.0" text="First Name :" />
+                  <Label layoutX="69.0" layoutY="190.0" prefHeight="19.0" prefWidth="118.0" text="Last Name :" />
+                  <Label layoutX="69.0" layoutY="260.0" prefHeight="18.0" prefWidth="78.0" text="Gender :" />
+                  <Label layoutX="473.0" layoutY="50.0" prefHeight="18.0" prefWidth="78.0" text="Tp No :" />
+                  <Label layoutX="69.0" layoutY="316.0" prefHeight="19.0" prefWidth="143.0" text="Email Address :" />
+                  <Label layoutX="69.0" layoutY="383.0" prefHeight="18.0" prefWidth="78.0" text="Address :" />
+                  <Label layoutX="473.0" layoutY="125.0" prefHeight="18.0" prefWidth="114.0" text="Artist Image :" />
+                  <ImageView fx:id="imgphoto" fitHeight="150.0" fitWidth="200.0" layoutX="626.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../office-man.png" />
+                     </image></ImageView>
+                  <Button fx:id="addImageButton" layoutX="604.0" layoutY="303.0" mnemonicParsing="false" onAction="#addbtnAction" prefHeight="38.0" prefWidth="194.0" text="Browse Profile Photo" />
+                  <Button fx:id="updateArtistBtn" layoutX="374.0" layoutY="470.0" mnemonicParsing="false" onAction="#updateArtistAction" prefHeight="38.0" prefWidth="150.0" text="Update Artist" />
+                  <Button fx:id="clearbtn" layoutX="562.0" layoutY="470.0" mnemonicParsing="false" onAction="#clearbtnAction" prefHeight="38.0" prefWidth="150.0" text="Clear Form" />
+               </children>
+            </AnchorPane>
+         </Tab>
+
+         <!-- Second Tab: Artist Details -->
+         <Tab text="Artist Details">
+            <AnchorPane>
+               <children>
+                  <TableView fx:id="artistTable" layoutX="11.0" layoutY="67.0" prefHeight="404.0" prefWidth="830.0">
+                     <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="69.60000801086426" text="ID" />
+                        <TableColumn fx:id="nicColumn" prefWidth="128.79998016357422" text="NIC" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="128.79998016357422" text="First Name" />
+                        <TableColumn fx:id="lastNameColumn" minWidth="0.0" prefWidth="128.79998016357422" text="Last Name" />
+                        <TableColumn fx:id="emailColumn" prefWidth="128.79998016357422" text="Email" />
+                        <TableColumn fx:id="tpNoColumn" prefWidth="128.79998016357422" text="TP No" />
+                        <TableColumn fx:id="genderColumn" prefWidth="128.79998016357422" text="Gender" />
+                        <TableColumn fx:id="addressColumn" prefWidth="100.0" text="Address" />
+                        <TableColumn fx:id="photoColumn" prefWidth="100.0" text="Photo" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="deleteArtistBtn" layoutX="705.0" layoutY="491.0" mnemonicParsing="false" onAction="#deleteArtistAction" text="Delete Artist" />
+                  <TextField fx:id="searchtxt" layoutX="661.0" layoutY="14.0" promptText="Enter NIC to search" />
+                  <Button fx:id="searchBtn" layoutX="558.0" layoutY="16.0" onAction="#searchbtnAction" text="Search" />
+
+               </children>
+            </AnchorPane>
+         </Tab>
+      </tabs>
+   </TabPane>
+   <AnchorPane layoutX="9.0" layoutY="9.0" prefHeight="44.0" prefWidth="854.0" style="-fx-background-color: white;">
+      <children>
+         <Label layoutX="14.0" layoutY="7.0" styleClass="label1" stylesheets="@style.css" text="MANAGE ARTIST" />
+      </children>
+   </AnchorPane>
+</AnchorPane>

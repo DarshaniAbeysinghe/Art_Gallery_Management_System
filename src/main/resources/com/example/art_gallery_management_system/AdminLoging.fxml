@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="494.0" prefWidth="797.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.AdminLogingController">
+   <children>
+      <!-- New Child AnchorPane -->
+      <AnchorPane layoutX="8.0" layoutY="9.0" prefHeight="471.0" prefWidth="781.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutY="1.0" prefHeight="473.0" prefWidth="331.0">
+               <children>
+                  <AnchorPane prefHeight="475.0" prefWidth="331.0" style="-fx-background-color: B1F0F7;">
+                     <children>
+                        <Label fx:id="label1" layoutX="26.0" layoutY="34.0" prefHeight="58.0" prefWidth="279.0" styleClass="label1" text="ART HEVEN STUDIO" textAlignment="CENTER">
+                           <font>
+                              <Font name="TechnicBold" size="36.0" />
+                           </font>
+                           <stylesheets>
+                              <URL value="@style.css" />
+                           </stylesheets>
+                        </Label>
+                        <Label layoutX="88.0" layoutY="100.0" prefHeight="27.0" prefWidth="154.0" styleClass="label2" stylesheets="@style.css" text="Welcome Back !" textAlignment="CENTER" />
+                        <ImageView fitHeight="204.0" fitWidth="279.0" layoutX="28.0" layoutY="217.0">
+                           <image>
+                              <Image url="@../../../923e35f0-a4c2-4841-8e55-4c1c4adf270b.gif" />
+                           </image>
+                        </ImageView>
+                        <Line endX="-100.00003051757812" endY="357.9999694824219" layoutX="435.0" layoutY="63.0" startX="-100.0" stroke="#489fb5" strokeWidth="3.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <TextField fx:id="usernametxt" layoutX="538.0" layoutY="63.0" prefHeight="42.0" prefWidth="203.0" promptText="Enter Your User Name" styleClass="label3" stylesheets="@style.css" />
+            <ImageView fx:id="qrimg" fitHeight="187.0" fitWidth="225.0" layoutX="479.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <image>
+                  <Image url="@../../../qr-code.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="addbtn" layoutX="592.0" layoutY="399.0" mnemonicParsing="false" onAction="#addbtnAction" prefHeight="26.0" prefWidth="153.0" stylesheets="@style.css" text="Add QR Code">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="textlbl" layoutX="376.0" layoutY="344.0" prefHeight="42.0" prefWidth="392.0" styleClass="label2" stylesheets="@style.css">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Label layoutX="405.0" layoutY="71.0" styleClass="label3" stylesheets="@style.css" text="User Name :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="scanbtn" layoutX="402.0" layoutY="399.0" mnemonicParsing="false" onAction="#scanbtnAction" prefHeight="26.0" prefWidth="153.0" stylesheets="@style.css" text="Scan QR Code">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="748.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../cross_14875490.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="33.0" layoutX="714.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../left-arrow_5467806.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

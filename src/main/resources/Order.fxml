@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="674.0" prefWidth="875.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.ManageOrderController">
+    <!-- NIC Field for Searching Customer -->
+    <TextField fx:id="nicField" layoutX="213.0" layoutY="42.0" onAction="#handleSearchOrder" prefHeight="42.0" prefWidth="196.0" promptText="NIC" />
+
+    <!-- Order ID Field -->
+    <TextField fx:id="orderIdField" editable="false" layoutX="602.0" layoutY="42.0" prefHeight="42.0" prefWidth="198.0" promptText="Order ID" />
+
+    <!-- TableView for Artwork Details -->
+    <TableView fx:id="orderTable" layoutX="22.0" layoutY="150.0" prefHeight="250.0" prefWidth="830.0">
+        <columns>
+            <TableColumn fx:id="colArtworkId" prefWidth="100.0" text="Artwork ID" />
+            <TableColumn fx:id="colArtworkName" prefWidth="300.0" text="Artwork Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="100.0" text="Quantity" />
+            <TableColumn fx:id="colPrice" prefWidth="100.0" text="Price" />
+        </columns>
+    </TableView>
+
+    <!-- Or Address Text Field for New Address -->
+    <TextField fx:id="newAddressField" layoutX="213.0" layoutY="476.0" prefHeight="42.0" prefWidth="196.0" promptText="Enter New Address" />
+
+    <!-- Total Price Field -->
+    <TextField fx:id="totalPriceField" editable="false" layoutX="602.0" layoutY="476.0" prefHeight="42.0" prefWidth="198.0" promptText="Total Price" />
+
+    <!-- Buttons for actions -->
+    <Button fx:id="confirmOrderBtn" layoutX="138.0" layoutY="584.0" mnemonicParsing="false" onAction="#handleConfirmOrder" prefHeight="38.0" prefWidth="150.0" text="Confirm Order" />
+    <Button fx:id="clearFormBtn" layoutX="612.0" layoutY="584.0" mnemonicParsing="false" onAction="#handleClearForm" prefHeight="38.0" prefWidth="150.0" text="Clear Form" />
+
+    <!-- Labels for Fields -->
+    <Label layoutX="69.0" layoutY="47.0" text="NIC:" />
+    <Label layoutX="473.0" layoutY="47.0" text="Order ID:" />
+    <Label layoutX="22.0" layoutY="121.0" text="Order Details:" />
+    <Label layoutX="69.0" layoutY="481.0" text="Delivery Location:" />
+    <Label layoutX="468.0" layoutY="481.0" text="Total Price:" />
+   <Button fx:id="confirmOrderBtn1" layoutX="362.0" layoutY="584.0" mnemonicParsing="false" onAction="#handleConfirmOrder" prefHeight="38.0" prefWidth="150.0" text="Edit" />
+</AnchorPane>

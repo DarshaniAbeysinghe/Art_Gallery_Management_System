@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="615.0" prefWidth="599.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.art_gallery_management_system.AddArtFormController">
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Add Art" />
+        <Label layoutX="20.0" layoutY="60.0" text="Art Title:" />
+        <TextField fx:id="artTitleField" layoutX="100.0" layoutY="60.0" />
+
+        <Label layoutX="20.0" layoutY="100.0" text="Artist:" />
+        <TextField fx:id="artistField" layoutX="100.0" layoutY="100.0" />
+
+        <Button layoutX="100.0" layoutY="150.0" onAction="#handleSubmit" text="Submit" />
+    </children>
+</AnchorPane>

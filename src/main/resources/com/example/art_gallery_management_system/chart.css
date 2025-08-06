@@ -1,0 +1,210 @@
+/* chart.css */
+
+/* General styling for the LineChart */
+.chart {
+    -fx-background-color: transparent; /* Removes default background */
+    -fx-padding: 10;
+}
+
+/* Styling for the chart plot background */
+.chart-plot-background {
+    -fx-background-color: #f9f9f9; /* Light grey background for the plot area */
+    -fx-border-color: #cccccc; /* Subtle border for the plot area */
+    -fx-border-width: 1;
+}
+
+/* Axis styling */
+.axis {
+    -fx-tick-label-fill: #333333; /* Dark grey color for tick labels */
+    -fx-tick-label-font-size: 12px; /* Adjust font size */
+}
+
+.axis-label {
+    -fx-text-fill: #333333; /* Dark grey color for axis labels */
+    -fx-font-size: 14px; /* Adjust font size for axis labels */
+    -fx-font-weight: bold; /* Make axis labels bold */
+}
+
+/* Line styling */
+.chart-series-line {
+    -fx-stroke-width: 2px; /* Slightly thicker line */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 2, 0, 0, 1); /* Subtle shadow for lines */
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light grey border */
+    -fx-border-radius: 4px; /* Rounded corners */
+    -fx-padding: 5 10; /* Padding inside the ComboBox */
+    -fx-font-size: 12px; /* Font size for ComboBox text */
+    -fx-text-fill: #333333; /* Dark grey text color */
+}
+
+.combo-box:hover {
+    -fx-border-color: #999999; /* Darker border on hover */
+}
+
+.combo-box:focused {
+    -fx-border-color: #4a90e2; /* Blue border when focused */
+    -fx-background-color: #ffffff; /* Maintain white background */
+}
+
+/* Dropdown list styling */
+.combo-box-popup {
+    -fx-background-color: #ffffff; /* White background for dropdown */
+    -fx-border-color: #cccccc; /* Light grey border */
+    -fx-border-radius: 4px;
+}
+
+
+
+
+
+
+/* style.css */
+
+/* General AnchorPane styling */
+.my-anchor-pane {
+    -fx-background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Label styling for the header */
+.label1 {
+    -fx-font-size: 24px; /* Large font size for the header */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-text-fill: #333333; /* Dark grey text color */
+    -fx-padding: 5; /* Padding for spacing */
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light grey border */
+    -fx-border-radius: 4px; /* Rounded corners */
+    -fx-padding: 5 10; /* Padding for ComboBox */
+    -fx-font-size: 12px; /* Font size for ComboBox text */
+    -fx-text-fill: #333333; /* Dark grey text color */
+}
+
+.combo-box:hover {
+    -fx-border-color: #999999; /* Darker border on hover */
+}
+
+.combo-box:focused {
+    -fx-border-color: #4a90e2; /* Blue border when focused */
+    -fx-background-color: #ffffff; /* Maintain white background */
+}
+
+.combo-box-popup {
+    -fx-background-color: #ffffff; /* White dropdown background */
+    -fx-border-color: #cccccc; /* Light grey border */
+}
+
+/* BarChart styling */
+.chart {
+    -fx-background-color: transparent; /* Removes default background */
+}
+
+.chart-plot-background {
+    -fx-background-color: #ffffff; /* White background for the plot area */
+    -fx-border-color: #cccccc; /* Light grey border for the plot area */
+    -fx-border-width: 1; /* Subtle border */
+}
+
+.axis {
+    -fx-tick-label-fill: #333333; /* Dark grey tick labels */
+    -fx-tick-label-font-size: 12px; /* Font size for tick labels */
+}
+
+.axis-label {
+    -fx-text-fill: #333333; /* Dark grey axis labels */
+    -fx-font-size: 14px; /* Slightly larger font size for labels */
+    -fx-font-weight: bold; /* Bold axis labels */
+}
+
+.chart-bar {
+    -fx-bar-fill: #4a90e2; /* Blue color for the bars */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 2); /* Subtle shadow effect */
+}
+
+.chart-legend {
+    -fx-background-color: transparent; /* Transparent background for the legend */
+    -fx-text-fill: #333333; /* Dark grey text for the legend */
+    -fx-font-size: 12px; /* Font size for legend text */
+}
+
+/* Styling for white background sections */
+.anchor-pane > .anchor-pane {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #dddddd; /* Light border for separation */
+    -fx-border-width: 1; /* Subtle border width */
+}
+
+
+
+
+
+
+
+/* style.css */
+
+/* General AnchorPane styling */
+.my-anchor-pane {
+    -fx-background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Label styling for the header */
+.label1 {
+    -fx-font-size: 24px; /* Large font size for header */
+    -fx-font-weight: bold; /* Bold text */
+    -fx-text-fill: #333333; /* Dark grey text color */
+    -fx-padding: 5; /* Padding for spacing */
+}
+
+/* ComboBox styling */
+.combo-box {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #cccccc; /* Light grey border */
+    -fx-border-radius: 4px; /* Rounded corners */
+    -fx-padding: 5 10; /* Padding for ComboBox */
+    -fx-font-size: 12px; /* Font size for ComboBox text */
+    -fx-text-fill: #333333; /* Dark grey text color */
+}
+
+.combo-box:hover {
+    -fx-border-color: #999999; /* Darker border on hover */
+}
+
+.combo-box:focused {
+    -fx-border-color: #4a90e2; /* Blue border when focused */
+    -fx-background-color: #ffffff; /* Maintain white background */
+}
+
+.combo-box-popup {
+    -fx-background-color: #ffffff; /* White dropdown background */
+    -fx-border-color: #cccccc; /* Light grey border */
+}
+
+/* PieChart styling */
+.chart {
+    -fx-background-color: transparent; /* Transparent background for the chart */
+}
+
+.chart-pie {
+    -fx-pie-fill: linear-gradient(to bottom, #4a90e2, #4179c4); /* Gradient blue for chart slices */
+    -fx-pie-outline: transparent; /* No outline for slices */
+}
+
+.chart-legend {
+    -fx-background-color: transparent; /* Transparent background for legend */
+    -fx-text-fill: #333333; /* Dark grey text for legend */
+    -fx-font-size: 12px; /* Font size for legend text */
+}
+
+/* Styling for white background sections */
+.anchor-pane > .anchor-pane {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-color: #dddddd; /* Light border for separation */
+    -fx-border-width: 1; /* Subtle border width */
+}

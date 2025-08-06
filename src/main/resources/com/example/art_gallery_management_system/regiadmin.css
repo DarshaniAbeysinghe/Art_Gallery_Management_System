@@ -1,0 +1,73 @@
+/* Main AnchorPane background */
+.anchor-pane {
+    -fx-background-color: #489fb5;
+}
+
+/* VBox Container with shadow effect */
+.vbox-pane {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 5);
+    -fx-padding: 20;
+}
+
+/* TextField styling */
+.text-field {
+    -fx-background-color: #eef2f7;
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #7a7a7a;
+}
+
+/* Register and Cancel Buttons styling */
+.button {
+    -fx-background-color: #034078;
+    -fx-background-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.2, 0, 3);
+}
+
+.button:hover {
+    -fx-background-color: #357ab7;
+}
+
+/* Main label styling for section headers */
+.label1 {
+    -fx-font-size: 24px;
+    -fx-text-fill: #034078;
+    -fx-font-weight: bold;
+    -fx-font-family: Georgia, serif;
+}
+
+/* Secondary label styling for field titles */
+.label2 {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+    -fx-font-family: Georgia, serif;
+}
+
+/* Label styling for smaller field titles */
+.label3 {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+}
+
+/* Styling for ImageView (QR code) */
+.qr-image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.2, 0, 3);
+}
+
+/* Styling for Image background in VBox */
+.image-background {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.15), 10, 0, 0, 5);
+}

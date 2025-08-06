@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="821.0" prefWidth="1535.0" styleClass="my-anchor-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.art_gallery_management_system.UserViewController">
+
+    <!-- Main Container -->
+    <AnchorPane prefHeight="818.0" prefWidth="1450.0">
+        <ImageView fx:id="closeimg" fitHeight="28.0" fitWidth="34.0" layoutX="1471.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../cross_14875490.png" />
+            </image>
+        </ImageView>
+
+        <!-- Left Filter Section -->
+        <VBox layoutX="8.0" layoutY="43.0" prefHeight="292.0" prefWidth="202.0" spacing="20.0" style="-fx-background-color: #f9f9f9; -fx-padding: 10; -fx-border-color: lightgray; -fx-border-width: 1;">
+            <!-- Subject Filter -->
+            <VBox spacing="10.0">
+                <Label style="-fx-font-weight: bold;" text="Subject" />
+                <ComboBox fx:id="subjectcmb" prefWidth="180.0" promptText="Select Subject" />
+            </VBox>
+
+            <!-- Medium Filter -->
+            <VBox spacing="10.0">
+                <Label style="-fx-font-weight: bold;" text="Medium" />
+                <ComboBox fx:id="mediumcmb" prefWidth="180.0" promptText="Select Medium" />
+            </VBox>
+            <AnchorPane prefHeight="63.0" prefWidth="180.0">
+                <children>
+                    <ImageView fx:id="recycleimg" fitHeight="42.0" fitWidth="49.0" layoutX="69.0" layoutY="11.0" onMouseClicked="#setupRecycleImgEvent" pickOnBounds="true" preserveRatio="true">
+
+                    <image>
+                            <Image url="@../../../all.png" />
+                        </image>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </ImageView>
+                </children>
+            </AnchorPane>
+        </VBox>
+
+        <!-- Artwork Display Section -->
+        <ScrollPane layoutX="219.0" layoutY="42.0" prefHeight="556.0" prefWidth="1304.0" style="-fx-background-color: transparent;">
+            <content>
+                <TilePane fx:id="artworkTilePane" hgap="10.0" prefHeight="30.0" prefWidth="1301.0" style="-fx-padding: 10; -fx-background-color: #ffffff;" vgap="10.0">
+                    <!-- Dynamic artwork items will be loaded here -->
+                </TilePane>
+            </content>
+        </ScrollPane>
+
+        <!-- Cart Section (Below Artwork Display) -->
+        <AnchorPane layoutX="218.0" layoutY="611.0" prefHeight="197.0" prefWidth="1304.0" style="-fx-background-color: #f9f9f9; -fx-border-color: lightgray; -fx-border-width: 1;">
+            <!-- Table for Cart -->
+            <TableView fx:id="cartTable" layoutX="14.0" layoutY="14.0" prefHeight="163.0" prefWidth="614.0">
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="100.0" text="ID" />
+                    <TableColumn fx:id="nameColumn" prefWidth="124.0" text="Name" />
+                    <TableColumn fx:id="quantityColumn" prefWidth="100.0" text="Quantity" />
+                    <TableColumn fx:id="priceColumn" prefWidth="142.39996337890625" text="Price" />
+                    <TableColumn fx:id="removeColumn" prefWidth="147.99993896484375" text="Remove" />
+                </columns>
+            </TableView>
+
+            <!-- Total Price -->
+            <VBox layoutX="820.0" layoutY="10.0" spacing="10.0" />
+            <Button fx:id="cartButton" layoutX="894.0" layoutY="33.0" prefHeight="36.0" prefWidth="186.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;" text="View Cart Summery">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <TextField fx:id="totalPriceField" editable="false" layoutX="717.0" layoutY="29.0" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #e1e1e1;" />
+            <Label layoutX="651.0" layoutY="40.0" style="-fx-font-weight: bold;" text="Total:" />
+            <Button fx:id="clearbtn" layoutX="717.0" layoutY="114.0" mnemonicParsing="false" onAction="#clearCart" prefHeight="36.0" prefWidth="150.0" text="Clear Cart">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+            <Button fx:id="buybtn" layoutX="1131.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleBuyNowClick" prefHeight="36.0" prefWidth="136.0" text="Buy Now">
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Button>
+
+            <ImageView fitHeight="54.0" fitWidth="55.0" layoutX="1236.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../../../left-click.png" />
+                </image>
+            </ImageView>
+        </AnchorPane>
+
+        <!-- Back Button -->
+        <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="1436.0" layoutY="8.0" onDragDetected="#openViewsForm" onMouseClicked="#openViewsForm" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../left-arrow_5467806.png" />
+            </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+        </ImageView>
+        <AnchorPane layoutX="7.0" layoutY="360.0" prefHeight="449.0" prefWidth="202.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="197.0" fitWidth="202.0" layoutX="1.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../Graphic%20&amp;%20Website%20Design.gif" />
+                    </image>
+                </ImageView>
+                <Label layoutX="46.0" layoutY="85.0" text="Join With Us" />
+                <Button fx:id="regibtn" layoutX="20.0" layoutY="244.0" mnemonicParsing="false" onAction="#openRegiForm" prefHeight="36.0" prefWidth="162.0" text="Register">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Label layoutX="29.0" layoutY="331.0" text="Leave a Feedback" />
+                <ImageView fx:id="feedbackimg" fitHeight="54.0" fitWidth="62.0" layoutX="73.0" layoutY="368.0" onMouseClicked="#openFeedbackForm" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../comment.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+
+            </children>
+        </AnchorPane>
+    </AnchorPane>
+
+</AnchorPane>
